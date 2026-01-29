@@ -27,17 +27,20 @@ You're not bad at the game... the algorithm is just better
 1. Clone the repository:
 
 ```bash
-git clone [YOUR_GITHUB_LINK_HERE] ```
+git clone [YOUR_GITHUB_LINK_HERE] 
+```
 
 2. Install Pygame
 
 ```bash
-pip install pygame```
+pip install pygame
+```
 
 3. Run the game:
 
 ```bash
-python runner.py ```
+python runner.py
+```
 
 **Controls:**
    • Use your Mouse to select your side (X or O).
