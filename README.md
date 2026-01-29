@@ -11,6 +11,10 @@ I've tried it. Trust me
 
 - The best you can do is **draw**
 
+  ![I've tried it. Trust me](https://github.com/user-attachments/assets/ecbbb8b5-1ba2-4acf-93f2-d7ce7aef05ce)
+
+  
+
   
 
   
