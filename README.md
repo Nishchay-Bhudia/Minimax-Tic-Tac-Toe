@@ -3,9 +3,13 @@
 A fully playable **Tic Tac Toe game with an unbeatable AI**, powered by the **Minimax algorithm** and visualised using **Pygame**.
 
 The AI always plays optimally, meaning:
-- You can **never beat it** NEVER ,try it 
+- You can **never beat it** NEVER ,try it
+  
+  https://github.com/user-attachments/assets/1f85f5ed-6f3e-49d5-ada9-647a25d45365
 
-- The best you can do is **draw** 
+- The best you can do is **draw**
+
+  
 
 
 You're not bad at the game... the algorithm is just better
