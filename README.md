@@ -27,7 +27,7 @@ You're not bad at the game... the algorithm is just better
 1. Clone the repository:
 
 ```bash
-git clone [YOUR_GITHUB_LINK_HERE] 
+git clone https://github.com/Nishchay-Bhudia/Minimax-Tic-Tac-Toe.git 
 ```
 
 2. Install Pygame
