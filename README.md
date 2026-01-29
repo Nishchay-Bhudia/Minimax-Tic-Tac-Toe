@@ -53,49 +53,37 @@ python runner.py
 
 
 
-## What is MiniMax?
+## 🧠 What is Minimax?
 
-Imagine Minimax as a little baby playing Tic Tac Toe. But this baby is very smart. **Here’s how it thinks:**
+Imagine Minimax as a **little baby** playing Tic Tac Toe. But this baby is very smart. 
 
-**“I want the most sweets (points)!”**
-
+### 🍬 "I want the most sweets (points)!"
 Minimax is like a greedy baby who wants to win every game. It looks at the board and thinks:
+> *“If I make this move, how many sweets (points) can I get?”*
 
-**“If I make this move, how many sweets (points) can I get?”**
+### ✋ "But the other baby wants to stop me!"
+The other player is also a clever baby. They want to win or at least block me from winning. So our baby Minimax doesn’t just pick the easiest-looking move. It pretends the opponent is smart too.
 
-**“But the other baby wants to stop me!”**
-
-The other baby (the other player) is also a clever baby. They want to win or at least block me from winning.
-
-So our baby Minimax doesn’t just pick the easiest-looking move. It pretends the opponent is smart too.
-
-**“I’ll try everything!”**
-
-Minimax goes into a fantasy world:
-
-**“What if I put my X here? What will the other baby do next?”**
-
-**“What if I put my X there instead? What happens?”**
-
+### 🌎 "I’ll try everything!"
+Minimax goes into a **fantasy world**:
+* *“What if I put my X here? What will the other baby do next?”*
+* *“What if I put my X there instead? What happens?”*
 It plays all possible games in its head, even the ones far in the future.
 
-**“Hmm… what’s best for me?”**
 
-Once it imagines all possible futures, it scores each ending:
 
-**+1** if it wins - baby Minimax gains sweets!
+### 📊 "Hmm… what’s best for me?"
+Once it imagines all possible futures, it **scores** each ending:
+* **+1** if it wins — *baby Minimax gains sweets!*
+* **0** if it’s a draw — *baby Minimax doesn't lose or gain sweets.*
+* **-1** if it loses — *sweets get taken from baby Minimax.*
 
-**0** if it’s a draw - baby Minimax doesnt loose or gain sweets
-
-**-1** if it loses - sweets get taken from baby Minimax
-
-Then it picks the move that gives the best score, knowing the other baby will try to ruin it.
-
-**“I can’t lose!”**
-
-Because it thinks ahead about every possible move, this baby is unbeatable.
+### 🏆 "I can’t lose!"
+Then it picks the move that gives the **best score**, knowing the other baby will try to ruin it. Because it thinks ahead about every possible move, this baby is **unbeatable**. 
 
 Even if the other player is tricky, Minimax will **Never** make a mistake.
+
+---
 
 
 
