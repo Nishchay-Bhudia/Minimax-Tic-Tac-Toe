@@ -12,7 +12,7 @@ You're not bad at the game... the algorithm is just better
 
 ---
 
-## 🧠 Features
+## Features
 
 - Minimax-based AI (optimal decision making)
 - Player vs Computer gameplay
@@ -61,10 +61,10 @@ Imagine Minimax as a **little baby** playing Tic Tac Toe. But this baby is very 
 Minimax is like a greedy baby who wants to win every game. It looks at the board and thinks:
 > *“If I make this move, how many sweets (points) can I get?”*
 
-### ✋ "But the other baby wants to stop me!"
+###  "But the other baby wants to stop me!"
 The other player is also a clever baby. They want to win or at least block me from winning. So our baby Minimax doesn’t just pick the easiest-looking move. It pretends the opponent is smart too.
 
-### 🌎 "I’ll try everything!"
+###  "I’ll try everything!"
 Minimax goes into a **fantasy world**:
 * *“What if I put my X here? What will the other baby do next?”*
 * *“What if I put my X there instead? What happens?”*
@@ -72,13 +72,13 @@ It plays all possible games in its head, even the ones far in the future.
 
 
 
-### 📊 "Hmm… what’s best for me?"
+###  "Hmm… what’s best for me?"
 Once it imagines all possible futures, it **scores** each ending:
 * **+1** if it wins — *baby Minimax gains sweets!*
 * **0** if it’s a draw — *baby Minimax doesn't lose or gain sweets.*
 * **-1** if it loses — *sweets get taken from baby Minimax.*
 
-### 🏆 "I can’t lose!"
+###  "I can’t lose!"
 Then it picks the move that gives the **best score**, knowing the other baby will try to ruin it. Because it thinks ahead about every possible move, this baby is **unbeatable**. 
 
 Even if the other player is tricky, Minimax will **Never** make a mistake.
