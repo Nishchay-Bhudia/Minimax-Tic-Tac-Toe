@@ -1,4 +1,4 @@
-# 🎮 Tic Tac Toe AI (Minimax + Pygame)
+# Tic Tac Toe AI (Minimax + Pygame)
 
 A fully playable **Tic Tac Toe game with an unbeatable AI**, powered by the **Minimax algorithm** and visualised using **Pygame**.
 
@@ -65,11 +65,11 @@ python runner.py
 
 
 
-## 🧠 What is Minimax?
+##  What is Minimax?
 
 Imagine Minimax as a **little baby** playing Tic Tac Toe. But this baby is very smart. 
 
-### 🍬 "I want the most sweets (points)!"
+###  "I want the most sweets (points)!"
 Minimax is like a greedy baby who wants to win every game. It looks at the board and thinks:
 > *“If I make this move, how many sweets (points) can I get?”*
 
