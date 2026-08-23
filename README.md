@@ -1,113 +1,55 @@
-# Tic Tac Toe AI (Minimax + Pygame)
+# Minimax Tic Tac Toe
 
-A fully playable **Tic Tac Toe game with an unbeatable AI**, powered by the **Minimax algorithm** and visualised using **Pygame**.
+Tic tac toe against an opponent that cannot lose, with a Pygame front end. The interesting
+half is `tictactoe.py`, which holds the rules and the search. `runner.py` is just the
+window, the board drawing and the mouse handling.
 
-The AI always plays optimally, meaning:
-- You can **never beat it** NEVER.
+## What it does
 
-I've tried it. Trust me
-  
-![I've tried it. Trust me](https://github.com/user-attachments/assets/1f85f5ed-6f3e-49d5-ada9-647a25d45365)
+Click to play as X or O, then click an empty square to move. X always goes first. The
+computer replies about half a second later, and when the game ends there is a Play Again
+button. The best result available to you is a draw. If you lose, you made a mistake
+somewhere, because the computer never will.
 
-- The best you can do is **draw**
+## How the AI works
 
-  ![I've tried it. Trust me](https://github.com/user-attachments/assets/ecbbb8b5-1ba2-4acf-93f2-d7ce7aef05ce)
+Minimax plays the entire rest of the game in its head before committing to a move. Starting
+from the current board it tries every legal move, then every reply to each of those, and
+keeps recursing until each imagined game is finished, scoring the finished boards +1 if X
+won, -1 if O won and 0 for a draw. Those scores then get carried back up the tree on the
+assumption that each player picks the branch that suits them, so X takes the highest value
+available and O takes the lowest, and every position ends up worth whatever the player to
+move would actually choose. The computer plays the move that survives that process, which
+is why it never walks into a line a perfect opponent could punish.
 
-  
+There is no alpha-beta pruning here. Tic tac toe has at most 9! = 362,880 move orderings
+from an empty board, so searching all of them takes well under a second and the extra code
+would not buy anything. The half-second pause before the computer moves is deliberate,
+without it the reply lands so fast the game feels broken.
 
-  
+## Running it
 
-  
-
-
-You're not bad at the game... the algorithm is just better
-
----
-
-## Features
-
-- Minimax-based AI (optimal decision making)
-- Player vs Computer gameplay
-- Clean Pygame UI
-- Choose to play as **X** or **O** (**X** always goes first)
-- Game-over detection (win / lose / draw)
-- Restart button after game ends
-
-
-## To Play The Game 
-
-1. Clone the repository:
-
-```bash
-git clone https://github.com/Nishchay-Bhudia/Minimax-Tic-Tac-Toe.git 
-```
-
-2. Install Pygame
+You need Python 3 and Pygame.
 
 ```bash
 pip install pygame
-```
-
-3. Run the game:
-
-```bash
 python runner.py
 ```
 
-**Controls:**
-   • Use your Mouse to select your side (X or O).
+One thing to sort out first: `runner.py` loads `OpenSans-Regular.ttf` from its own folder,
+and that file is not in this repository. Download Open Sans, drop the regular weight `.ttf`
+next to `runner.py` under exactly that name, or the game dies on startup before the window
+appears.
 
-   • Click on any empty square to make your move.
+## Current state
 
-  • Hit the Play Again button once the match ends.
+It works and I have not found a way to beat it. Two rough edges I know about:
 
+- Mouse input is read by polling `pygame.mouse.get_pressed()` every frame rather than
+  handling click events, so `time.sleep(0.2)` is used as a debounce on the side-select and
+  Play Again buttons. It works, but it is a hack and it stalls the whole loop.
+- There is no keyboard control and no way to quit other than closing the window.
 
+## Tech
 
-
-
-##  What is Minimax?
-
-Imagine Minimax as a **little baby** playing Tic Tac Toe. But this baby is very smart. 
-
-###  "I want the most sweets (points)!"
-Minimax is like a greedy baby who wants to win every game. It looks at the board and thinks:
-> *“If I make this move, how many sweets (points) can I get?”*
-
-###  "But the other baby wants to stop me!"
-The other player is also a clever baby. They want to win or at least block me from winning. So our baby Minimax doesn’t just pick the easiest-looking move. It pretends the opponent is smart too.
-
-###  "I’ll try everything!"
-Minimax goes into a **fantasy world**:
-* *“What if I put my X here? What will the other baby do next?”*
-* *“What if I put my X there instead? What happens?”*
-It plays all possible games in its head, even the ones far in the future.
-
-
-
-###  "Hmm… what’s best for me?"
-Once it imagines all possible futures, it **scores** each ending:
-* **+1** if it wins — *baby Minimax gains sweets!*
-* **0** if it’s a draw — *baby Minimax doesn't lose or gain sweets.*
-* **-1** if it loses — *sweets get taken from baby Minimax.*
-
-###  "I can’t lose!"
-Then it picks the move that gives the **best score**, knowing the other baby will try to ruin it. Because it thinks ahead about every possible move, this baby is **unbeatable**. 
-
-Even if the other player is tricky, Minimax will **Never** make a mistake.
-
----
-
-
-
-
-## 📜 License
-
-This project is open-source and free to use for learning and experimentation.
-
-## 🤝 Contributing
-
-Feel free to fork the repository and improve the game!  
-Suggestions for features, UI, or AI improvements are welcome.
-
-
-
+Python 3 and Pygame. MIT licensed, see LICENSE.
